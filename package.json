@@ -1,5 +1,11 @@
 {
   "name": "rtk-query-app",
+  "description": "Kitchen sink use and study of RTK Query.",
+  "author": {
+    "name": "Cezar Andrew Villegas Santarin",
+    "email": "csantarin@moneylion.com",
+    "url": "https://github.com/csantarin"
+  },
   "version": "0.1.0",
   "private": true,
   "dependencies": {
