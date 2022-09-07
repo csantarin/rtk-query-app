@@ -1,13 +1,13 @@
 import { CurriedGetDefaultMiddleware } from "@reduxjs/toolkit/dist/getDefaultMiddleware";
 import createSagaMiddleware from "redux-saga";
 
-import apiSlice from "api/sm/apiSlice";
+import pokemonApi from "pokemon/sm/pokemonApi";
 import { RootState } from "./rootSlice";
 
 export const sagaMiddleware = createSagaMiddleware();
 
 const middlewares = [
-  apiSlice.middleware,
+  pokemonApi.middleware,
   sagaMiddleware,
 ];
 

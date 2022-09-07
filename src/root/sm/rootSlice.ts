@@ -1,10 +1,10 @@
 import { combineReducers } from "redux";
 
-import apiSlice from "api/sm/apiSlice";
 import { counterReducer, counterSliceName } from "counter/sm/counterSlice";
+import pokemonApi from "pokemon/sm/pokemonApi";
 
 const reducers = {
-  [apiSlice.reducerPath]: apiSlice.reducer,
+  [pokemonApi.reducerPath]: pokemonApi.reducer,
   [counterSliceName]: counterReducer,
 };
 
