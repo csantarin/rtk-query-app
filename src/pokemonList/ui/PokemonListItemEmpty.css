@@ -1,0 +1,11 @@
+/**
+ * https://stackoverflow.com/a/22218694
+ */
+.PokemonListItemEmpty {
+  display: flex;
+  justify-content: center; /* align horizontal */
+  align-items: center; /* align vertical */
+  font-size: 2em;
+  height: 6rem;
+  width: 6rem;
+}
