@@ -1,7 +1,7 @@
 import { counterRuntime } from 'counter/sm/counterSagas';
-import { all, call } from 'redux-saga/effects';
+import { all, call, CallEffect } from 'redux-saga/effects';
 
-const runtimes = [
+const runtimes: CallEffect<unknown>[] = [
   call(counterRuntime),
 ];
 
