@@ -1,4 +1,3 @@
-import Counter from 'counter/ui/Counter';
 import PokemonList from 'pokemonList/ui/PokemonList';
 import React from 'react';
 import { Provider } from 'react-redux';
@@ -28,7 +27,6 @@ const Root = () => {
     <Provider store={store}>
       <App>
         <section className="App-section">
-          <Counter />
           <PokemonList />
         </section>
       </App>
