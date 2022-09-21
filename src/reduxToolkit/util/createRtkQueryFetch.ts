@@ -1,9 +1,9 @@
-import { ThunkAction } from "@reduxjs/toolkit";
-import { QueryDefinition } from "@reduxjs/toolkit/dist/query";
-import { StartQueryActionCreatorOptions, QueryActionCreatorResult, MutationActionCreatorResult } from "@reduxjs/toolkit/dist/query/core/buildInitiate";
-import { MutationDefinition, QueryArgFrom } from "@reduxjs/toolkit/dist/query/endpointDefinitions";
-import { AnyAction } from "redux";
-import { dispatch } from "root/sm/store";
+import { ThunkAction } from '@reduxjs/toolkit';
+import { QueryDefinition } from '@reduxjs/toolkit/dist/query';
+import { StartQueryActionCreatorOptions, QueryActionCreatorResult, MutationActionCreatorResult } from '@reduxjs/toolkit/dist/query/core/buildInitiate';
+import { MutationDefinition, QueryArgFrom } from '@reduxjs/toolkit/dist/query/endpointDefinitions';
+import { AnyAction } from 'redux';
+import dispatch from './dispatch';
 
 type StartMutationActionCreatorOptions = Parameters<StartMutationActionCreator<any>>[1];
 
