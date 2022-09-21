@@ -7,7 +7,7 @@ import PokemonNameDebounceInput from './PokemonNameDebounceInput';
 const PokemonList = () => {
   const [ pokemonNames, setPokemonNames ] = useState([
     'bulbasaur',
-    'pikachu',
+    'charmander',
     'ditto',
     'bulbasaur'
   ]);
