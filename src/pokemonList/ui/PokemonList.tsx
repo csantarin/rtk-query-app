@@ -30,6 +30,7 @@ const PokemonList = () => {
 
   return (
     <div className='App'>
+      <h2>Pokemon List</h2>
       <select onChange={handlePollingIntervalChange}>
         <option value={0}>Off</option>
         <option value={1000}>1s</option>

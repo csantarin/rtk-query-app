@@ -8,4 +8,6 @@ const store = configureStore({
   middleware: rootMiddleware,
 });
 
+export const { dispatch } = store;
+
 export default store;

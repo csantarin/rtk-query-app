@@ -1,5 +1,6 @@
+import Pikachu from 'pikachu/ui/Pikachu';
 import PokemonList from 'pokemonList/ui/PokemonList';
-import React from 'react';
+import React, { useState } from 'react';
 import { Provider } from 'react-redux';
 
 import { sagaMiddleware } from 'root/sm/rootMiddleware';
@@ -22,12 +23,45 @@ const App = (props: React.PropsWithChildren) => {
   );
 };
 
+type ContentName = 'PokemonList' | 'Pikachu';
+
+const CONTENT_NAMES: ContentName[] = [
+  'PokemonList',
+  'Pikachu',
+];
+
 const Root = () => {
+  const [ contentName, setContentName ] = useState<ContentName>('PokemonList');
+
+  const handleContentNameClick = (contentName: ContentName) => () => {
+    setContentName(contentName);
+  };
+
+  const renderContent = (contentName: ContentName) => {
+    switch (contentName) {
+      case 'PokemonList': {
+        return <PokemonList />;
+      }
+      case 'Pikachu': {
+        return <Pikachu />;
+      }
+    }
+  };
+
   return (
     <Provider store={store}>
       <App>
         <section className="App-section">
-          <PokemonList />
+          {CONTENT_NAMES.map((contentName) => (
+            <span
+              key={contentName}
+              className="App-link"
+              onClick={handleContentNameClick(contentName)}
+            >
+              {contentName}
+            </span>
+          ))}
+          {renderContent(contentName)}
         </section>
       </App>
     </Provider>
