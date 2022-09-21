@@ -11,3 +11,13 @@
 .App-section {
   padding: 0.5em 1em;
 }
+
+.App-link {
+  color: -webkit-link;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.App-link:not(:first-child) {
+  margin-left: 1em;
+}

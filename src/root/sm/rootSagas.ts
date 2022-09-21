@@ -1,6 +1,8 @@
-import { all, CallEffect } from 'redux-saga/effects';
+import { pikachuRuntime } from 'pikachu/sm/pikachuSagas';
+import { all, call, CallEffect } from 'redux-saga/effects';
 
 const runtimes: CallEffect<unknown>[] = [
+  call(pikachuRuntime),
 ];
 
 export function* rootRuntime() {

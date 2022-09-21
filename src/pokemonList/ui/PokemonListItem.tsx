@@ -1,11 +1,12 @@
+import Pokemon from "pokemon/ui/Pokemon";
 import { useGetPokemonByNameQuery } from "../sm/pokemonListApi";
 
-export interface PokemonProps {
+export interface PokemonListItemProps {
   name: string;
   pollingInterval: number;
 }
 
-const PokemonListItem = (props: PokemonProps) => {
+const PokemonListItem = (props: PokemonListItemProps) => {
   const { name, pollingInterval } = props;
   const { data, error, isLoading, isFetching } = useGetPokemonByNameQuery(
     name,
@@ -15,20 +16,12 @@ const PokemonListItem = (props: PokemonProps) => {
   );
 
   return (
-    <>
-      {error ? (
-        <>Oh no, there was an error</>
-      ) : isLoading ? (
-        <>Loading...</>
-      ) : data ? (
-        <>
-          <h3>
-            {data.species.name} {isFetching ? "..." : ""}
-          </h3>
-          <img src={data.sprites.front_shiny!} alt={data.species.name} />
-        </>
-      ) : null}
-    </>
+    <Pokemon
+      data={data}
+      error={error}
+      isLoading={isLoading}
+      isFetching={isFetching}
+    />
   );
 };
 
