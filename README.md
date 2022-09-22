@@ -1,3 +1,20 @@
+# RTK Query Example
+
+Demonstrates how RTK Query can be used in an existing infrastructure using:
+
+- React
+- React Redux
+- Redux
+- Redux Toolkit
+- Redux Toolkit Query with React
+- Redux Saga
+
+Existing architecture (i.e. user flows) are implemented with Redux Saga with some lifecycle methods being expressed in the form of Redux state slices. This study attempts to embed RTK Query into the existing artchitecture without taking out current understandings of how the architecture works.
+
+A discussion of caveats is available here: https://github.com/csantarin/rtk-query-app/pull/5#discussion_r977258609
+
+-----
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
